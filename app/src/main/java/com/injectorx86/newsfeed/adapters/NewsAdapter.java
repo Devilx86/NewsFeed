@@ -37,8 +37,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
     public void onBindViewHolder(NewsViewHolder holder, int position) {
         News news = mNewsList.get(position);
 
+        holder.mNewsThumbnail.setImageResource(0);
         if(news.getThumbnailURL() != null) {
-            holder.mNewsThumbnail.setImageDrawable(null);
             Picasso.with(holder.mNewsThumbnail.getContext())
                     .load(news.getThumbnailURL())
                     .fit()
@@ -69,6 +69,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsViewHolder> {
     public int getItemCount() {
         return mNewsList.size();
     }
+
 
     public void update(ArrayList<News> newsList) {
         mNewsList.clear();
