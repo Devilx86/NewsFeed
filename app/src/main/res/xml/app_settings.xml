@@ -1,0 +1,23 @@
+<android.support.v7.preference.PreferenceScreen
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="News">
+
+        <android.support.v7.preference.SwitchPreferenceCompat
+            android:key="News_ShowOnlyEnglishArticles"
+            android:title="@string/preference_english_switch"
+            android:summary="@string/preference_summar_english_switch"
+            android:defaultValue="true" />
+
+        <EditTextPreference
+            android:key="News_SearchKeyword"
+            android:title="@string/preference_editText_searchkeyword"
+            android:summary="@string/preference_summary_searchkeyword"
+            android:dialogTitle="@string/dialog_title_searchkeyword" />
+
+    </PreferenceCategory>
+
+</android.support.v7.preference.PreferenceScreen>

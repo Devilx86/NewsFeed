@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">News Feed</string>
+    <string name="apiKey">11fc331d33b6406da5d16d281416f49a</string>
+
+    <string name="preference_english_switch">English Articles</string>
+    <string name="preference_summar_english_switch">"Download and display only articles written in english"</string>
+
+    <string name="preference_editText_searchkeyword">Keywords</string>
+    <string name="preference_summary_searchkeyword">Only receive news articles with the specified word</string>
+    <string name="dialog_title_searchkeyword">Look for</string>
+</resources>

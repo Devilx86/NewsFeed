@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/actionbar_refresh"
+        android:title="Refresh"
+        android:icon="@drawable/ic_action_refresh"
+        app:showAsAction="always|collapseActionView" />
+
+    <item
+        android:id="@+id/actionbar_preferences"
+        android:title="Preferences"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/actionbar_delete"
+        android:title="Delete"
+        app:showAsAction="collapseActionView" />
+
+</menu>
