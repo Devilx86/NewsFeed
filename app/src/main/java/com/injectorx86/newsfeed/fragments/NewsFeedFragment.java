@@ -80,13 +80,15 @@ public class NewsFeedFragment extends Fragment {
                 MainActivity.changeFragment(this.getFragmentManager(), new SettingsFragment());
                 return true;
 
-            case R.id.actionbar_delete:
-                mNewsList.remove(0 );
-                updateUI();
-
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        new DownloadNewsTask(this.getContext(), "Downloading News").execute();
     }
 
     private void updateUI() {
