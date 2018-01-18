@@ -89,6 +89,7 @@ public class NewsFeedFragment extends Fragment {
     public void onResume() {
         super.onResume();
         new DownloadNewsTask(this.getContext(), "Downloading News").execute();
+        updateUI();
     }
 
     private void updateUI() {
