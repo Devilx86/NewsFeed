@@ -94,7 +94,7 @@ public abstract class JSONRequestTask extends AsyncTask<String, String, Boolean>
         Log.i("News_SearchKeyword", ""+isShowEnglishOnly);
 
         if(searchKeyword.isEmpty()) {
-            url = url.replace("q=[keyword]", searchKeyword);
+            url = url.replace("[keyword]", "android");
         } else {
             url = url.replace("[keyword]", searchKeyword);
         }

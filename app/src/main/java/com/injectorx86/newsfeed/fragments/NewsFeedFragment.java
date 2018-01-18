@@ -54,6 +54,7 @@ public class NewsFeedFragment extends Fragment {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
+        mNewsList = new ArrayList<>();
         new DownloadNewsTask(this.getContext(), "Downloading News").execute();
 
         return view;
@@ -90,7 +91,6 @@ public class NewsFeedFragment extends Fragment {
 
     private void updateUI() {
         if(mNewsAdapter == null) {
-            mNewsList = new ArrayList<>();
             mNewsAdapter = new NewsAdapter(mNewsList, getActivity());
             mRecyclerView.setAdapter(mNewsAdapter);
         } else {
@@ -153,7 +153,7 @@ public class NewsFeedFragment extends Fragment {
             super.onPostExecute(hasTaskCompleted);
 
             if(hasTaskCompleted) {
-                    updateUI();
+                updateUI();
             } else {
                 // Load old news
                 String oldJSON = preferences.getString("NewsJsonCache", "-1");
