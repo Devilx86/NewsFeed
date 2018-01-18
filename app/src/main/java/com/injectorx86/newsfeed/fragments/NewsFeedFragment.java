@@ -100,6 +100,7 @@ public class NewsFeedFragment extends Fragment {
 
     private void parseNewsArticles(String jsonString) {
         try {
+            mNewsList = new ArrayList<>();
             JSONArray articles = new JSONObject(jsonString).getJSONArray("articles");
 
             // looping through All articles
